@@ -1,4 +1,6 @@
 <x-guest-layout>
+    <h1 class="text-center text-2xl font-bold mb-4">Hello, Welcome!</h1>
+    <p class="text-gray-600 mb-8 text-center">We wish you well today to create and manage your team. Your Counted Tech Team</p>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -40,13 +42,13 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ml-4">
-                {{ __('Register') }}
-            </x-primary-button>
         </div>
+        <button class="bg-blue-600 flex items-center justify-center text-white rounded-lg w-full h-10">
+            {{ __('Register') }}
+        </button>
     </form>
 </x-guest-layout>
